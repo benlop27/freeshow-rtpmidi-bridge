@@ -49,7 +49,7 @@ flowchart LR
         B[RTP MIDI Protocol]
     end
     subgraph FreeShow_RTP_MIDI_Bridge
-        C[Python Server (__main__.py)]
+        C[Python Server]
         C1[Future: Plugin Support]
         C2[Future: Configurable Actions]
         C3[Future: Web UI]
