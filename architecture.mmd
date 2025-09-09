@@ -1,0 +1,22 @@
+flowchart LR
+    subgraph User MIDI Device/DAW
+        A[Computer / Mac (DAW, MIDI App, or Controller)]
+    end
+    subgraph RTP MIDI Network
+        B[RTP MIDI Protocol]
+    end
+    subgraph FreeShow RTP MIDI Bridge
+        C[Python Server\n(__main__.py)]
+        C1[Future: Plugin Support]
+        C2[Future: Configurable Actions]
+        C3[Future: Web UI]
+    end
+    subgraph FreeShow
+        D[FreeShow HTTP API]
+    end
+    A -- Note On (C4) --> B
+    B -- RTP MIDI --> C
+    C -- HTTP POST /action:next_slide --> D
+    C -- "" --> C1
+    C -- "" --> C2
+    C -- "" --> C3
