@@ -60,9 +60,6 @@ flowchart LR
     A -- "Note On (C4)" --> B
     B -- "RTP MIDI" --> C
     C -- "HTTP POST /action:next_slide" --> D
-    C -- "" --> E
-    C -- "" --> F
-    C -- "" --> G
 ```
 
 ---
