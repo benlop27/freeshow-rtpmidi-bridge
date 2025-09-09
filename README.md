@@ -42,14 +42,14 @@ MIT License (see LICENSE file)
 
 ```mermaid
 flowchart LR
-    subgraph User MIDI Device/DAW
-        A[Computer / Mac (DAW, MIDI App, or Controller)]
+    subgraph User_MIDI_Device_or_DAW
+        A[Computer/Mac: DAW, MIDI App, or Controller]
     end
-    subgraph RTP MIDI Network
+    subgraph RTP_MIDI_Network
         B[RTP MIDI Protocol]
     end
-    subgraph FreeShow RTP MIDI Bridge
-        C[Python Server\n(__main__.py)]
+    subgraph FreeShow_RTP_MIDI_Bridge
+        C[Python Server (__main__.py)]
         C1[Future: Plugin Support]
         C2[Future: Configurable Actions]
         C3[Future: Web UI]
@@ -57,9 +57,9 @@ flowchart LR
     subgraph FreeShow
         D[FreeShow HTTP API]
     end
-    A -- Note On (C4) --> B
-    B -- RTP MIDI --> C
-    C -- HTTP POST /action:next_slide --> D
+    A -- "Note On (C4)" --> B
+    B -- "RTP MIDI" --> C
+    C -- "HTTP POST /action:next_slide" --> D
     C -- "" --> C1
     C -- "" --> C2
     C -- "" --> C3
