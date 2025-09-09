@@ -50,9 +50,9 @@ flowchart LR
     end
     subgraph FreeShow_RTP_MIDI_Bridge
         C[Python Server]
-        C1[Future: Plugin Support]
-        C2[Future: Configurable Actions]
-        C3[Future: Web UI]
+        E[Future: Plugin Support]
+        F[Future: Configurable Actions]
+        G[Future: Web UI]
     end
     subgraph FreeShow
         D[FreeShow HTTP API]
@@ -60,9 +60,9 @@ flowchart LR
     A -- "Note On (C4)" --> B
     B -- "RTP MIDI" --> C
     C -- "HTTP POST /action:next_slide" --> D
-    C -- "" --> C1
-    C -- "" --> C2
-    C -- "" --> C3
+    C -- "" --> E
+    C -- "" --> F
+    C -- "" --> G
 ```
 
 ---
